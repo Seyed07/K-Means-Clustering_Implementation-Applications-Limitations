@@ -1,50 +1,78 @@
+Here’s a sample README file for your GitHub project on the K-Means algorithm:
 
-# Radial Basis Function Network for Non-Linear Regression and Clustering
+---
 
-## Overview
-This repository contains the implementation of a Radial Basis Function (RBF) network for non-linear regression and clustering. The network uses KMeans clustering to initialize the centroids of the basis functions and gradient-based optimization to update the parameters.
+# K-Means Clustering Experiment
 
-## Features
-- Uses KMeans for initializing centroids.
-- Trains using gradient descent on the RBF parameters.
-- Demonstrates non-linear regression using noisy sine wave data.
-  
-## Requirements
-- Python 3.8+
-- NumPy
-- Matplotlib
-- Scikit-learn
+## Author
+Seyed Ahmad Hosseini  
+hosseiniahmad07@gmail.com
 
-## Installation
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/YourUsername/RBF-Regression-Clustering.git
-    ```
-2. Install the required libraries:
-    ```bash
-    pip install numpy matplotlib scikit-learn
-    ```
+## Description
+In this experiment, we explore the K-Means algorithm, a popular unsupervised machine learning method used for clustering. We implement the algorithm and discuss its applications and disadvantages.
 
-## Usage
-To run the RBF model on the noisy sine wave regression problem:
+## K-Means Algorithm Overview
+K-Means is used to group data points into K distinct clusters based on their features, making it particularly useful for discovering patterns in unlabeled data.
+
+### How It Works
+1. **Initialization**: Randomly select K initial centroids from the dataset.
+2. **Assign to Clusters**: For each data point, calculate the distance to all centroids and assign the point to the closest centroid.
+3. **Update Centroids**: Recompute the centroid of each cluster as the mean of the points in that cluster.
+4. **Iterate**: Repeat the process until the cluster assignments stabilize or a set number of iterations is reached.
+
+### Advantages
+- Simple and easy to implement
+- Scalable for large datasets
+- Fast and efficient
+- Interpretable clustering results
+- Flexible with different distance metrics
+
+### Disadvantages
+- Requires predefined K
+- Sensitive to initialization and outliers
+- Assumes equal-sized, spherical clusters
+- Can get stuck in local optima
+
+## Code Description
+
+### Importing Libraries
+We use the following libraries:
+- `Numpy`: For calculations
+- `Matplotlib`: For visualization
+- `Sklearn`: To generate synthetic data samples
+
+### K-Means Implementation
+The K-Means algorithm is implemented in a custom class. Key methods include:
+- `fit()`: Starts the clustering process.
+- `forward()`: Calculates the Euclidean distance between data points and centroids.
+
+### Error Calculation
+Two functions are provided to calculate the mean error of the clusters:
+1. `calculate_cluster_error()`: Computes the average distance of points from their cluster center.
+2. `calculate_mean_error()`: Calculates the overall mean error across all clusters.
+
+### Application: Image Compression
+The K-Means algorithm is also applied to reduce the size of images. The process includes loading an image, converting it to a 2D array, applying K-Means, and visualizing the reduced-size image.
+
+## Running the Code
+To run the code, ensure you have the required libraries installed. You can use the following command to install any missing libraries:
 ```bash
-python rbf_model.py
+pip install numpy matplotlib scikit-learn opencv-python
 ```
 
-## Code Structure
-- `rbf_model.py`: Main script that sets up and trains the RBF network on a noisy sine wave dataset.
-- `RBF`: Contains the RBF class definition, including the forward pass, training function, and gradient computation.
-  
-## Example
-In this example, the RBF network is trained to predict noisy sine wave values. The result shows the true vs predicted values:
+### Example Usage
+1. Generate synthetic data and visualize clustering.
+2. Apply K-Means to compress an image:
+   - Replace `'CI4_sample_picture.jpg'` with the path to your image file.
 
-```bash
-plt.plot(y, label="True")
-plt.plot(model.forward(x), label="Predicted")
-plt.legend()
-plt.show()
-```
+## Outputs
+- Clustering visualizations
+- Compressed images demonstrating K-Means application
 
+## Limitations of K-Means
+We also demonstrate the limitations of K-Means on various datasets, such as noisy circles.
+
+---
 ### Output Example
 The following image demonstrates the result of the model on the noisy sine wave dataset:
 
