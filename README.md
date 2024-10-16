@@ -73,7 +73,7 @@ pip install numpy matplotlib scikit-learn opencv-python
 We also demonstrate the limitations of K-Means on various datasets, such as noisy circles.
 
 ---
-### Output Example
-The following image demonstrates the result of the model on the noisy sine wave dataset:
+### Example
+- Compressed images with K-Means
 
 ![Model Output](output.png)
