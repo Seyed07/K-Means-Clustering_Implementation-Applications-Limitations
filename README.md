@@ -1,6 +1,5 @@
-کد فایل `README.md` که می‌توانید در گیت‌هاب استفاده کنید به شرح زیر است:
 
-```markdown
+
 # Radial Basis Function Network for Non-Linear Regression and Clustering
 
 ## Overview
@@ -47,11 +46,10 @@ plt.legend()
 plt.show()
 ```
 
-## License
-This project is licensed under the MIT License.
+### Output Example
+The following image demonstrates the result of the model on the noisy sine wave dataset:
 
-## Acknowledgments
-Inspired by traditional RBF networks for function approximation and clustering tasks.
-```
+![Model Output](output.png)
 
-شما می‌توانید این کد را در فایل `README.md` خود در گیت‌هاب ذخیره کنید تا توضیحات لازم را در مورد پروژه‌تان ارائه دهد.
+### توضیحات:
+2. بقیه قسمت‌ها مشابه فایل قبلی هستند، اما حالا تصویر خروجی نیز به کاربران نشان داده می‌شود.
