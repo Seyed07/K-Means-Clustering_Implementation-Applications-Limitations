@@ -1,5 +1,4 @@
 
-
 # Radial Basis Function Network for Non-Linear Regression and Clustering
 
 ## Overview
@@ -50,6 +49,3 @@ plt.show()
 The following image demonstrates the result of the model on the noisy sine wave dataset:
 
 ![Model Output](output.png)
-
-### توضیحات:
-2. بقیه قسمت‌ها مشابه فایل قبلی هستند، اما حالا تصویر خروجی نیز به کاربران نشان داده می‌شود.
